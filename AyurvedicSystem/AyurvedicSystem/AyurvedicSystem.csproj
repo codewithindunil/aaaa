@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{713DB94A-90CE-4E99-8DDC-7E0DC1B80ED5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AyurvedicSystem</RootNamespace>
+    <AssemblyName>AyurvedicSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>F:\learning_trials\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.1.11\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>..\packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.20\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AccessController\AccessCOntroller.cs" />
+    <Compile Include="Controllers\RegistrationController\Generalprocess.cs" />
+    <Compile Include="Controllers\RegistrationController\Registrations.cs" />
+    <Compile Include="Controllers\SearchController\Search.cs" />
+    <Compile Include="Controllers\ShopController\Shop.cs" />
+    <Compile Include="Controllers\TreatmentController\TreatmentControll.cs" />
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTotal.Designer.cs">
+      <DependentUpon>FrmTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdminViews\AddUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminMain.Designer.cs">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\ViewUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AdminViews\ViewUser.Designer.cs">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterItem.Designer.cs">
+      <DependentUpon>RegisterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterMain.Designer.cs">
+      <DependentUpon>RegisterMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterPatient.Designer.cs">
+      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegisterSupplier.Designer.cs">
+      <DependentUpon>RegisterSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegistrationDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\RegisterViews\RegistrationDoctor.Designer.cs">
+      <DependentUpon>RegistrationDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchDoctor.Designer.cs">
+      <DependentUpon>SearchDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchItems.Designer.cs">
+      <DependentUpon>SearchItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchMain.Designer.cs">
+      <DependentUpon>SearchMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchPatient.Designer.cs">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SearchViews\SearchSupplier.Designer.cs">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopForOthers.Designer.cs">
+      <DependentUpon>ShopForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopForPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopForPatient.Designer.cs">
+      <DependentUpon>ShopForPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ShopViews\ShopMain.Designer.cs">
+      <DependentUpon>ShopMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TreatmentsExisting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TreatmentsExisting.Designer.cs">
+      <DependentUpon>TreatmentsExisting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TreatmentsHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TreatmentsHistory.Designer.cs">
+      <DependentUpon>TreatmentsHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TteatmentsMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TreatmentsViews\TteatmentsMain.Designer.cs">
+      <DependentUpon>TteatmentsMain.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTotal.resx">
+      <DependentUpon>FrmTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\AdminViews\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\AdminMain.resx">
+      <DependentUpon>AdminMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AdminViews\ViewUser.resx">
+      <DependentUpon>ViewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterViews\RegisterItem.resx">
+      <DependentUpon>RegisterItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterViews\RegisterMain.resx">
+      <DependentUpon>RegisterMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterViews\RegisterPatient.resx">
+      <DependentUpon>RegisterPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterViews\RegisterSupplier.resx">
+      <DependentUpon>RegisterSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RegisterViews\RegistrationDoctor.resx">
+      <DependentUpon>RegistrationDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchViews\SearchDoctor.resx">
+      <DependentUpon>SearchDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchViews\SearchItems.resx">
+      <DependentUpon>SearchItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchViews\SearchMain.resx">
+      <DependentUpon>SearchMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchViews\SearchPatient.resx">
+      <DependentUpon>SearchPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SearchViews\SearchSupplier.resx">
+      <DependentUpon>SearchSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShopViews\ShopForOthers.resx">
+      <DependentUpon>ShopForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShopViews\ShopForPatient.resx">
+      <DependentUpon>ShopForPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShopViews\ShopMain.resx">
+      <DependentUpon>ShopMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TreatmentsViews\TreatmentsExisting.resx">
+      <DependentUpon>TreatmentsExisting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TreatmentsViews\TreatmentsHistory.resx">
+      <DependentUpon>TreatmentsHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TreatmentsViews\TteatmentsMain.resx">
+      <DependentUpon>TteatmentsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ayurvedic-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
